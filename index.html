@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Mock Test with Diagrams - Grade 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .question h3 {
+            margin-top: 0;
+            color: #0066cc;
+            font-size: 1.2em;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .short-answer {
+            width: 100%;
+            height: 120px;
+            margin-top: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .check-btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .check-btn:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .explanation {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            border-radius: 4px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .explanation img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Biology Mock Test with Diagrams – Grade 11</h1>
+    <p style="text-align: center; color: #555;">Test your knowledge and learn with diagrams! Answer each question and click "Check" for feedback.</p>
+
+    <div id="questions">
+        <!-- Multiple-Choice Questions -->
+        <div class="question" id="q1">
+            <h3>1. What component of the cell membrane gives it flexibility?</h3>
+            <div class="options">
+                <input type="radio" name="q1" value="a"> a) Proteins<br>
+                <input type="radio" name="q1" value="b"> b) Cholesterol<br>
+                <input type="radio" name="q1" value="c"> c) Phospholipid heads<br>
+                <input type="radio" name="q1" value="d"> d) Carbohydrate chains<br>
+            </div>
+            <button class="check-btn" data-question="q1">Check</button>
+            <div class="result" id="result-q1"></div>
+        </div>
+
+        <div class="question" id="q2">
+            <h3>2. Which molecule can cross the lipid bilayer most easily without assistance?</h3>
+            <div class="options">
+                <input type="radio" name="q2" value="a"> a) Glucose<br>
+                <input type="radio" name="q2" value="b"> b) Water<br>
+                <input type="radio" name="q2" value="c"> c) Carbon dioxide<br>
+                <input type="radio" name="q2" value="d"> d) Potassium ions<br>
+            </div>
+            <button class="check-btn" data-question="q2">Check</button>
+            <div class="result" id="result-q2"></div>
+        </div>
+
+        <div class="question" id="q3">
+            <h3>3. What type of transport requires energy to move substances against their gradient?</h3>
+            <div class="options">
+                <input type="radio" name="q3" value="a"> a) Simple diffusion<br>
+                <input type="radio" name="q3" value="b"> b) Facilitated diffusion<br>
+                <input type="radio" name="q3" value="c"> c) Active transport<br>
+                <input type="radio" name="q3" value="d"> d) Osmosis<br>
+            </div>
+            <button class="check-btn" data-question="q3">Check</button>
+            <div class="result" id="result-q3"></div>
+        </div>
+
+        <div class="question" id="q4">
+            <h3>4. Which protein type is most likely to span the entire cell membrane?</h3>
+            <div class="options">
+                <input type="radio" name="q4" value="a"> a) Peripheral proteins<br>
+                <input type="radio" name="q4" value="b"> b) Integral proteins<br>
+                <input type="radio" name="q4" value="c"> c) Surface proteins<br>
+                <input type="radio" name="q4" value="d"> d) Attachment proteins<br>
+            </div>
+            <button class="check-btn" data-question="q4">Check</button>
+            <div class="result" id="result-q4"></div>
+        </div>
+
+        <div class="question" id="q5">
+            <h3>5. What happens to a plant cell in a hypertonic solution?</h3>
+            <div class="options">
+                <input type="radio" name="q5" value="a"> a) It swells and bursts<br>
+                <input type="radio" name="q5" value="b"> b) It becomes turgid<br>
+                <input type="radio" name="q5" value="c"> c) It undergoes plasmolysis<br>
+                <input type="radio" name="q5" value="d"> d) It remains unchanged<br>
+            </div>
+            <button class="check-btn" data-question="q5">Check</button>
+            <div class="result" id="result-q5"></div>
+        </div>
+
+        <div class="question" id="q6">
+            <h3>6. Which of these is a function of carrier proteins?</h3>
+            <div class="options">
+                <input type="radio" name="q6" value="a"> a) Anchoring the cytoskeleton<br>
+                <input type="radio" name="q6" value="b"> b) Facilitating diffusion of specific molecules<br>
+                <input type="radio" name="q6" value="c"> c) Forming pores for water<br>
+                <input type="radio" name="q6" value="d"> d) Receiving chemical signals<br>
+            </div>
+            <button class="check-btn" data-question="q6">Check</button>
+            <div class="result" id="result-q6"></div>
+        </div>
+
+        <div class="question" id="q7">
+            <h3>7. What property of the lipid bilayer prevents charged ions from crossing easily?</h3>
+            <div class="options">
+                <input type="radio" name="q7" value="a"> a) Its hydrophilic heads<br>
+                <input type="radio" name="q7" value="b"> b) Its hydrophobic core<br>
+                <input type="radio" name="q7" value="c"> c) Its protein channels<br>
+                <input type="radio" name="q7" value="d"> d) Its cholesterol content<br>
+            </div>
+            <button class="check-btn" data-question="q7">Check</button>
+            <div class="result" id="result-q7"></div>
+        </div>
+
+        <div class="question" id="q8">
+            <h3>8. Which molecule provides energy for active transport?</h3>
+            <div class="options">
+                <input type="radio" name="q8" value="a"> a) Glucose<br>
+                <input type="radio" name="q8" value="b"> b) ATP<br>
+                <input type="radio" name="q8" value="c"> c) Oxygen<br>
+                <input type="radio" name="q8" value="d"> d) Water<br>
+            </div>
+            <button class="check-btn" data-question="q8">Check</button>
+            <div class="result" id="result-q8"></div>
+        </div>
+
+        <div class="question" id="q9">
+            <h3>9. What type of solution has the same solute concentration as the cell’s interior?</h3>
+            <div class="options">
+                <input type="radio" name="q9" value="a"> a) Hypertonic<br>
+                <input type="radio" name="q9" value="b"> b) Hypotonic<br>
+                <input type="radio" name="q9" value="c"> c) Isotonic<br>
+                <input type="radio" name="q9" value="d"> d) Osmotic<br>
+            </div>
+            <button class="check-btn" data-question="q9">Check</button>
+            <div class="result" id="result-q9"></div>
+        </div>
+
+        <div class="question" id="q10">
+            <h3>10. Which membrane component helps cells recognize each other?</h3>
+            <div class="options">
+                <input type="radio" name="q10" value="a"> a) Cholesterol<br>
+                <input type="radio" name="q10" value="b"> b) Phospholipids<br>
+                <input type="radio" name="q10" value="c"> c) Glycoproteins<br>
+                <input type="radio" name="q10" value="d"> d) Pump proteins<br>
+            </div>
+            <button class="check-btn" data-question="q10">Check</button>
+            <div class="result" id="result-q10"></div>
+        </div>
+
+        <!-- Short-Answer Questions -->
+        <div class="question" id="q11">
+            <h3>11. a) Describe the structure of a phospholipid molecule. b) Explain how phospholipids arrange themselves into a bilayer in water. (6 marks)</h3>
+            <textarea class="short-answer" name="q11"></textarea>
+            <button class="check-btn" data-question="q11">Check</button>
+            <div class="result" id="result-q11"></div>
+        </div>
+
+        <div class="question" id="q12">
+            <h3>12. a) Define facilitated diffusion and give an example. b) Sketch and describe how a channel protein assists in this process. (6 marks)</h3>
+            <textarea class="short-answer" name="q12"></textarea>
+            <button class="check-btn" data-question="q12">Check</button>
+            <div class="result" id="result-q12"></div>
+        </div>
+
+        <div class="question" id="q13">
+            <h3>13. a) Explain the process of osmosis across a cell membrane. b) Predict what happens to an animal cell in an isotonic solution, including a simple diagram description. (8 marks)</h3>
+            <textarea class="short-answer" name="q13"></textarea>
+            <button class="check-btn" data-question="q13">Check</button>
+            <div class="result" id="result-q13"></div>
+        </div>
+
+        <div class="question" id="q14">
+            <h3>14. a) Compare passive and active transport across the cell membrane. b) Describe the role of pump proteins in active transport with an example and a diagram sketch idea. (10 marks)</h3>
+            <textarea class="short-answer" name="q14"></textarea>
+            <button class="check-btn" data-question="q14">Check</button>
+            <div class="result" id="result-q14"></div>
+        </div>
+
+        <div class="question" id="q15">
+            <h3>15. a) Explain how the cell membrane’s selective permeability is maintained. b) Sketch and describe a diagram showing how ions are blocked but small non-polar molecules pass through. (10 marks)</h3>
+            <textarea class="short-answer" name="q15"></textarea>
+            <button class="check-btn" data-question="q15">Check</button>
+            <div class="result" id="result-q15"></div>
+        </div>
+    </div>
+
+    <script>
+        const answers = {
+            q1: 'b',
+            q2: 'c',
+            q3: 'c',
+            q4: 'b',
+            q5: 'c',
+            q6: 'b',
+            q7: 'b',
+            q8: 'b',
+            q9: 'c',
+            q10: 'c',
+            q11: `a) A phospholipid has a hydrophilic head (phosphate group) and two hydrophobic tails (fatty acids). b) In water, phospholipids form a bilayer with heads facing outward toward water and tails inward, away from water, due to hydrophobic interactions.`,
+            q12: `a) Facilitated diffusion is passive transport of molecules across the membrane via proteins, e.g., glucose through a carrier protein. b) Channel proteins form pores; sketch a tube-like structure with ions passing through from high to low concentration.`,
+            q13: `a) Osmosis is water moving across a semipermeable membrane from high water concentration to low water concentration. b) In an isotonic solution, water moves in and out equally, keeping the animal cell stable; sketch a circle with arrows showing balanced water flow.`,
+            q14: `a) Passive transport (no energy, down gradient, e.g., diffusion) vs. active transport (energy, against gradient, e.g., pumps). b) Pump proteins use ATP to move molecules against their gradient, e.g., sodium-potassium pump; sketch a protein shifting shape to push ions.`,
+            q15: `a) Selective permeability is due to the hydrophobic core blocking polar/charged molecules while allowing small non-polar ones. b) Sketch a bilayer with ions bouncing off the core and small molecules like O2 passing through.`
+        };
+
+        const explanations = {
+            q1: `Cholesterol is like a flexibility coach for the cell membrane! It sits between phospholipids, keeping them from packing too tightly (which would make the membrane stiff) or too loosely (which would make it floppy). <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Diagram of cholesterol in lipid bilayer" style="width:200px;"> <p><em>Diagram:</em> Shows cholesterol (yellow) between phospholipids (heads and tails).</p>`,
+            q2: `Carbon dioxide (CO2) is small and non-polar, so it slips through the lipid bilayer like a ninja through a crowd! Polar molecules like glucose or ions need help from proteins. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="CO2 diffusion" style="width:200px;"> <p><em>Diagram:</em> CO2 molecules crossing a bilayer.</p>`,
+            q3: `Active transport is the cell’s uphill battle! It uses energy (usually ATP) to push molecules against their gradient—like pumping air into a tire. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Active transport pump" style="width:200px;"> <p><em>Diagram:</em> A pump moving ions against gradient with ATP.</p>`,
+            q4: `Integral proteins are the deep divers of the membrane—they span across it, often acting as channels or pumps. Peripheral proteins just hang out on the surface. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Integral vs peripheral proteins" style="width:200px;"> <p><em>Diagram:</em> Integral protein through bilayer, peripheral on top.</p>`,
+            q5: `In a hypertonic solution, water leaves the plant cell, causing plasmolysis—the cytoplasm shrinks away from the cell wall. Think of it like a deflating balloon! <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Plasmolysis" style="width:200px;"> <p><em>Diagram:</em> Plant cell with shrunken cytoplasm.</p>`,
+            q6: `Carrier proteins are like taxis—they grab specific molecules (like glucose) and shuttle them across the membrane without energy. Channels are more like open tunnels. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Carrier protein" style="width:200px;"> <p><em>Diagram:</em> Carrier protein changing shape to move glucose.</p>`,
+            q7: `The hydrophobic core is the membrane’s bouncer—it hates water and charged ions, so they can’t pass without a protein escort. Non-polar stuff sneaks by easily! <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Hydrophobic core" style="width:200px;"> <p><em>Diagram:</em> Ions blocked, non-polar molecules passing.</p>`,
+            q8: `ATP is the cell’s energy currency! It powers active transport by breaking down to release energy—like fuel for a pump. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="ATP in active transport" style="width:200px;"> <p><em>Diagram:</em> ATP splitting to power a pump.</p>`,
+            q9: `An isotonic solution matches the cell’s interior—no net water movement, so the cell stays happy and balanced. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Isotonic solution" style="width:200px;"> <p><em>Diagram:</em> Cell with equal water flow in/out.</p>`,
+            q10: `Glycoproteins are like ID tags on the cell surface—they help cells recognize each other, crucial for immune responses or tissue formation. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Glycoproteins" style="width:200px;"> <p><em>Diagram:</em> Proteins with sugar chains on membrane.</p>`,
+            q11: `a) A phospholipid is a double agent: a water-loving head and water-hating tails. b) They line up in water like soldiers, heads out, tails in, forming a bilayer fortress! <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Phospholipid bilayer" style="width:200px;"> <p><em>Diagram:</em> Cross-section of bilayer with heads (blue) and tails (yellow).</p>`,
+            q12: `a) Facilitated diffusion is a free ride for molecules down their gradient via proteins—like glucose hitching a lift. b) Channel proteins are tunnels; sketch a pore with ions sliding through! <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Channel protein" style="width:200px;"> <p><em>Diagram:</em> Tube-like protein with ions moving.</p>`,
+            q13: `a) Osmosis is water’s quest for balance, flowing to where solute is higher. b) In isotonic, the animal cell stays normal—sketch a circle with arrows in and out equally. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Osmosis in isotonic" style="width:200px;"> <p><em>Diagram:</em> Cell with balanced water arrows.</p>`,
+            q14: `a) Passive transport is a lazy river (no energy, down gradient), active transport is a pump (energy, uphill). b) Pumps use ATP to shift molecules—like the sodium-potassium pump; sketch a protein flipping with ions. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Sodium-potassium pump" style="width:200px;"> <p><em>Diagram:</em> Pump moving Na+ out, K+ in.</p>`,
+            q15: `a) The bilayer’s oily core picks winners: non-polar pass, polar/ions don’t. b) Sketch a bilayer with ions stuck outside, O2 slipping through the middle. <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" alt="Selective permeability" style="width:200px;"> <p><em>Diagram:</em> Bilayer with ions blocked, O2 passing.</p>`
+        };
+
+        const multipleChoiceQuestions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkButtons = document.querySelectorAll('.check-btn');
+            checkButtons.forEach(button => {
+                const questionId = button.getAttribute('data-question');
+                button.addEventListener('click', () => {
+                    checkAnswer(questionId);
+                });
+            });
+        });
+
+        function checkAnswer(questionId) {
+            const resultDiv = document.getElementById(`result-${questionId}`);
+            const correctAnswer = answers[questionId];
+            let userAnswer, isCorrect;
+
+            if (multipleChoiceQuestions.includes(questionId)) {
+                userAnswer = document.querySelector(`input[name="${questionId}"]:checked`);
+                if (userAnswer === null) {
+                    isCorrect = false;
+                } else {
+                    isCorrect = userAnswer.value === correctAnswer;
+                }
+            } else {
+                userAnswer = document.querySelector(`textarea[name="${questionId}"]`).value.trim().toLowerCase();
+                const keywords = correctAnswer.toLowerCase().split(' ').filter(word => word.length > 3);
+                let matchedKeywords = 0;
+                keywords.forEach(keyword => {
+                    if (userAnswer.includes(keyword)) matchedKeywords++;
+                });
+                isCorrect = matchedKeywords / keywords.length >= 0.8;
+            }
+
+            resultDiv.style.display = 'block';
+            if (isCorrect) {
+                resultDiv.className = 'result correct';
+                resultDiv.innerHTML = `<p>Great job! Your answer is correct.</p>`;
+            } else {
+                resultDiv.className = 'result incorrect';
+                resultDiv.innerHTML = `<p>Oops! That’s not quite right.</p><p><strong>Correct Answer:</strong> ${correctAnswer}</p>`;
+            }
+            resultDiv.innerHTML += `<div class="explanation"><strong>Learn More:</strong> ${explanations[questionId]}</div>`;
+        }
+    </script>
+</body>
+</html>
